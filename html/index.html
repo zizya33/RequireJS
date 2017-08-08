@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<script src="../js/script.js"></script>  
+<script type="text/javascript" src="../js/jquery-3.1.1.min.js"></script>
+
+<script data-main="../js/config.js" src="../js/require.js"></script>
+
+<title>ЛР 8 | Главная</title>
+
+<script>
+reSelect();
+</script>
+</head>
+
+<body>
+<br><br>
+<div id="lleft">
+	<form>
+		<span>Выберите имя сотрудника:</span><br><br>
+		<select id="surnames"></select>
+		<br><br><br>
+
+		<span>Выберите стаж:</span><br><br>
+		<select id="exp" size="1">
+		<option>Нет стажа</option>
+		<option>Менее 5 лет</option>
+		<option>5-10 лет</option>
+		<option>Более 10 лет</option>			
+		</select><br><br>
+
+		<span>Выберите тарифную ставку: </span><br><br>
+		<select id="rate" size="1">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>			
+		</select><br><br>
+
+		<input type="checkbox" id="spec" value="spec" ><span>Повышение за специфику труда</span><br><br>
+		<input type="checkbox" id="complexity" value="complexity" ><span>Повышенная сложность работ</span><br><br>
+
+		<input type="button" value="Сохранить данные" id="saveData" onclick="showSalary($('select#surnames').val(),$('select#rate').val(),$('select#exp').val(),$('#pension').prop('checked'),$('#breach').prop('checked'));"></input>
+		<br><br>
+		<input type="button" value="Вывести з/п" onclick="showAverage();"></input><br><br>
+		<input type="button" value="Вывести информацию" onclick="showInfo($('select#surnames').val());"></input><br><br>
+	</form>
+</div>
+<div id="rright">
+	<span>Информация о сотруднике </span>
+	<ol id="infoSotr"></ol>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+body {
+  background-image: url(../resource/fon.jpg);
+  background-color: #0085ca;
+  background-size: 100vw;  
+	background-attachment: fixed; 
+  color: white; 
+	text-align: center;
+	font-family: body;
+  text-shadow: 0 0 1vh black;
+}
+
+@font-face {
+    font-family: body;
+    src: url(../resource/fonts/HelveticaNeueCyr-Medium.otf);
+}
+
+form{
+  width: 100%;
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: rgba(0,0,0,.4);
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 2%;
+
+}
+
+
+
+input, select{
+  display: inline-block;
+  color: #003049;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 3px solid black;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+
+input:hover, select:hover{
+  background: rgba(255,255,255,.4);
+}
+
+span, li{
+  font-size: 17px;
+  font-family: Segoe Print;
+  color: #FF4500;
+}
+
+#lleft{
+  width: 50%;
+  float: left;
+}
+
+#rright{
+  width: 40%;
+  float: right;
+}
+
+
